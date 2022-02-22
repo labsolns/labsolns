@@ -235,14 +235,10 @@ more. v0.5.1 contains feature enhancements required by LIMS*Nucleus")
     (version "0.1.0")
    (source (origin
             (method url-fetch)
-           ;; (uri (string-append "file:///home/mbc/syncd/tobedeleted/limsn/limsn-0.1.tar.gz"))
-           ;; (uri (string-append "file:///home/mbc/projects/limsn/limsn-0.1.tar.gz"))
-           ;; (uri (string-append "file:///home/admin/limsn-0.1.tar.gz"))
-	     (uri (string-append "file:///home/admin/ln11/limsn-0.1.tar.gz"))
-	    
+             (uri (string-append "https://github.com/labsolns/labsolns/releases/download/v0.1.0/limsn-0.1.tar.gz"))
             (sha256
              (base32
-              "0ssi1wpaf7plaswqqjwigppsg5fyh99vdlb9kzl7c9lng89ndq1i"))))
+              "0girgnral650n3dgdic3xgqk060dhb01f7qyicv37wjgzxrlawjb"))))
    (build-system gnu-build-system)
   (arguments `(#:tests? #false ; there are none
 			#:phases (modify-phases %standard-phases
