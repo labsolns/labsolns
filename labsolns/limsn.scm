@@ -287,7 +287,7 @@ more. v0.5.1 contains feature enhancements required by LIMS*Nucleus")
            (uri (string-append "https://github.com/labsolns/labsolns/releases/download/v0.1.0/limsn-0.1.tar.gz"))
             (sha256
              (base32
-              "0girgnral650n3dgdic3xgqk060dhb01f7qyicv37wjgzxrlawjb"))))           
+              "0slz927inlwznssrssvbf01p3vpbnsxy19na6nvkrzjfdyyf2bvf"))))           
    (build-system gnu-build-system)
   (arguments `(#:tests? #false ; there are none
 			#:phases (modify-phases %standard-phases
@@ -395,8 +395,8 @@ more. v0.5.1 contains feature enhancements required by LIMS*Nucleus")
        ("texinfo" ,texinfo)
        ("util-linux" ,util-linux))) ;for the `script' command
 
-    (synopsis "Microwell Plate management Software")
-    (description "description")
+    (synopsis "Microwell Plate Management Software")
+    (description "Microwell plate management software. Track samples through reformat, rearray workflows. Assign assay results to sample and identify hits. Control liquid handling robots.")
     (home-page "http://www.labsolns.com/")
     (license (list license:gpl3+ license:lgpl3+)))) ;dual license
 
