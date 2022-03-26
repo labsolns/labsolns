@@ -307,7 +307,7 @@ more. v0.5.1 contains feature enhancements required by LIMS*Nucleus")
 			     (setenv "GUILE_LOAD_PATH"
 				     (string-append (assoc-ref outputs "out") "/share/guile/site/3.0:"
 						    "/gnu/store/rgydar9dfvflqqz2irgh7njj34amaxc6-glibc-utf8-locales-2.31/lib/locale/2.31:"
-						    "/gnu/store/rj0pzbki1m5hpcshs614mhkrgs2b3i9d-artanis-0.5.2/share/guile/site/3.0:"
+						    "/gnu/store/6ys37ml4jk0351aqsdbnba46wbald0p2-artanis-0.5.2/share/guile/site/3.0:"
 						 ;;   "/gnu/store/np3v3bifspgqslc7xl2rz2sg08q2wvzq-artanis-0.4.1/share/guile/site/3.0:"
 						 ;;   "/gnu/store/rj0pzbki1m5hpcshs614mhkrgs2b3i9d-artanis-0.5.2/share/guile/site/3.0/lib:"
 						   "/gnu/store/780bll8lp0xvj7rnazb2qdnrnb329lbw-guile-json-3.5.0/share/guile/site/3.0:"
