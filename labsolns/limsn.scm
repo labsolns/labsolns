@@ -295,7 +295,9 @@ more. v0.5.1 contains feature enhancements required by LIMS*Nucleus")
 			       (lambda* (#:key inputs outputs #:allow-other-keys)
 				 (substitute* '("./limsn/lib/labsolns/lnpg.scm"
 						"./scripts/start-limsn.sh"
-						"./scripts/init-limsn.sh"
+						"./scripts/init-limsn-channel.sh"
+						"./scripts/init-limsn-pack.sh"
+						"./scripts/load-pg.sh"
 						"./scripts/install-pg-aws.sh"
 						"./limsn/ENTRY")						
 						(("abcdefgh")
@@ -350,11 +352,22 @@ more. v0.5.1 contains feature enhancements required by LIMS*Nucleus")
 					   (dummy (install-file "./scripts/start-limsn.sh" bin-dir))					   
 					   (dummy (chmod (string-append bin-dir "/start-limsn.sh") #o555 ))
 					   (dummy (wrap-program (string-append bin-dir "/start-limsn.sh")
-								`( "PATH" ":" prefix  (,bin-dir) )))					   
-					   (dummy (install-file "./scripts/init-limsn.sh" bin-dir))
-					   (dummy (chmod (string-append bin-dir "/init-limsn.sh") #o555 ))
-					   (dummy (wrap-program (string-append bin-dir "/init-limsn.sh")
-						    `( "PATH" ":" prefix  (,bin-dir) )))
+								`( "PATH" ":" prefix  (,bin-dir) )))
+					   
+					   (dummy (install-file "./scripts/init-limsn-channel.sh" bin-dir))
+					   (dummy (chmod (string-append bin-dir "/init-limsn-channel.sh") #o555 ))
+					   (dummy (wrap-program (string-append bin-dir "/init-limsn-channel.sh")
+								`( "PATH" ":" prefix  (,bin-dir) )))
+					   
+					   (dummy (install-file "./scripts/init-limsn-pack.sh" bin-dir))
+					   (dummy (chmod (string-append bin-dir "/init-limsn-pack.sh") #o555 ))
+					   (dummy (wrap-program (string-append bin-dir "/init-limsn-pack.sh")
+								`( "PATH" ":" prefix  (,bin-dir) )))
+					   (dummy (install-file "./scripts/load-pg.sh" bin-dir))
+					   (dummy (chmod (string-append bin-dir "/load-pg.sh") #o555 ))
+					   (dummy (wrap-program (string-append bin-dir "/load-pg.sh")
+								`( "PATH" ":" prefix  (,bin-dir) )))
+					   
 					   (dummy (install-file "./scripts/install-pg-aws.sh" bin-dir))					   
 					   (dummy (chmod (string-append bin-dir "/install-pg-aws.sh") #o555 ))) ;;read execute, no write
 				      (wrap-program (string-append bin-dir "/install-pg-aws.sh")
