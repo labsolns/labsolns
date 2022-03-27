@@ -287,7 +287,7 @@ more. v0.5.1 contains feature enhancements required by LIMS*Nucleus")
            (uri (string-append "https://github.com/labsolns/labsolns/releases/download/v0.1.0/limsn-0.1.tar.gz"))
             (sha256
              (base32
-              "03a1xsx609f74lnk9p1hn7q4k8sn6vrfv7022fyj5ypzlf8hk4s4"))))           
+              "073qzmz3f4rn154sg0rw34ajgg1s052bs3w7annsjh3kf4q5xvm6"))))           
    (build-system gnu-build-system)
   (arguments `(#:tests? #false ; there are none
 			#:phases (modify-phases %standard-phases
